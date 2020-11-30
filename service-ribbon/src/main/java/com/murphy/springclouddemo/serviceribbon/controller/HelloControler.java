@@ -14,7 +14,7 @@ public class HelloControler {
     HelloService helloService;
 
     @RequestMapping(value = "/hi",method = RequestMethod.GET)
-    public String hi(@RequestParam String name){
+    public String hi(@RequestParam(value = "name") String name){
 
        // return  "123";
         return helloService.hiService(name);
