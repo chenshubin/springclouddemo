@@ -1,15 +1,15 @@
-package com.murphy.springclouddemo.democlient;
+package com.murphy.springclouddemo.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-//@EnableEurekaClient
+@EnableEurekaClient
 @SpringBootApplication
-public class DemoClientApplication {
+public class DemoClientApplication2 {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoClientApplication.class, args);
+        SpringApplication.run(DemoClientApplication2.class, args);
     }
 
 }

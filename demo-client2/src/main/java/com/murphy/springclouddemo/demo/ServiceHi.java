@@ -1,4 +1,4 @@
-package com.murphy.springclouddemo.democlient;
+package com.murphy.springclouddemo.demo;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,9 +15,8 @@ public class ServiceHi {
     String port;
 
 
-
     @RequestMapping("/sayHi")
-    public String sayHi(@RequestParam String name){
+    public String sayHi(@RequestParam String name) {
         return "hi " + name + ",i am from port:" + port;
 
     }
