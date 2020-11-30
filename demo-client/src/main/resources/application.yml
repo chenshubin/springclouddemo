@@ -10,3 +10,7 @@ eureka:
 spring:
   application:
     name: @pom.artifactId@
+  devtools:
+    restart:
+      endbled: true     #热部署生效
+
