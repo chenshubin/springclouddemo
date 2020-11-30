@@ -1,18 +1,15 @@
 package com.murphy.springclouddemo.serviceribbon.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-@Service
-public class HelloService {
-
-    @Autowired
-    RestTemplate restTemplate;
+@FeignClient(value = "demo-client")
+public interface HelloService {
 
 
-    public String hiService(String name) {
-        return restTemplate.getForObject("http://DEMO-CLIENT/serviceHi/sayHi?name="+name,String.class);
-    }
+    @RequestMapping(value = "/serviceHi/sayHi", method = RequestMethod.GET)
+    public String hiService(String name) ;
 
 }
