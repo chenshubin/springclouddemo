@@ -12,5 +12,9 @@ spring:
     name: @pom.artifactId@
   devtools:
     restart:
-      endbled: true
+      enabled: true
+
+feign:
+  hystrix:
+    enabled: true
 
