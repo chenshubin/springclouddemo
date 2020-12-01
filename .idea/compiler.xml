@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo-eureka" />
         <module name="demo-client" />
-        <module name="demo-client2" />
-        <module name="com.murphy.springclouddemo" />
         <module name="service-ribbon" />
+        <module name="service-gateway" />
+        <module name="demo-eureka" />
+        <module name="com.murphy.springclouddemo" />
+        <module name="demo-client2" />
       </profile>
     </annotationProcessing>
   </component>
@@ -19,6 +20,7 @@
       <module name="demo-client" options="-parameters" />
       <module name="demo-client2" options="-parameters" />
       <module name="demo-eureka" options="-parameters" />
+      <module name="service-gateway" options="-parameters" />
       <module name="service-ribbon" options="-parameters" />
     </option>
   </component>
